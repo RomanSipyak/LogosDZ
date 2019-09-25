@@ -1,0 +1,6 @@
+miha 12 MALE
+$ghgj 12
+$hgghj 12
+ola 12 FEMALE
+$gfhf 12
+kochka 15 MALE

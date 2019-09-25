@@ -1,0 +1,81 @@
+package Dz1;
+
+import java.sql.*;
+
+
+public class Main {
+	public static final String CONNECTION_URL = 
+		"jdbc:mysql://localhost:3306/dz1?useSSL=false";	
+		public static final String USER = "root";
+		public static final String PASSWORD = "1307195422";
+		//////////////////////////////////////////////////////////////////////////
+		public static final String CREATE_TABLE_DZ1_QUERY=
+				"CREATE TABLE IF NOT EXISTS dz1(id INT PRIMARY KEY AUTO_INCREMENT,"
+				+ "first_name VARCHAR(20),last_name VARCHAR(40),"
+				+"idifikant_kay INT,number INT,hobby VARCHAR(255),weight INT,height INT,"+
+				"gender VARCHAR(255),date_of_born INT,proffesion VARCHAR(255)";
+		//////////////////////////////////////////////////////////////////////////
+		public static final String INSERT_TO_DZ1
+			="INSERT INTO dz1(first_name,last_name,idifikant_kay,number,hobby,weight,height,"
+					+ "gender,date_of_born,proffesion) VALUES(?,?,?,?,?,?,?,?,?,?)";
+		
+		public static final String DELETE_FORM_ID
+		="DELETE FROM dz1 WHERE id = 101";
+		//////////////////////////////////////////////////////////////////////////
+		public static final String SELECT_DZ1_ALL = 
+				"SELECT * FROM dz1";
+				
+				
+				
+				public static void main(String[] args) {
+			try(Connection connection 
+					= DriverManager.getConnection(CONNECTION_URL,USER,PASSWORD)){
+//				Statement statement = connection.createStatement();
+//				statement.execute(CREATE_TABLE_PERSON_QUERY);
+//				statement.close();
+				
+//				Statement statement = connection.createStatement();
+//				statement.execute(CREATE_TABLE_BOOK_QUERY);
+//				statement.close();
+				
+//				Statement statement = connection.createStatement();
+//				statement.execute(ADD_CONSTRAINT_PERSON_BOOK);
+//				statement.close();
+				
+//				PreparedStatement statement = 
+//						connection.prepareStatement(INSERT_PERSON);
+//				statement.setInt(1, 18);
+//				statement.setString(2, "Ivan");
+//				statement.executeUpdate();
+//				statement.setInt(1, 25);
+//				statement.setString(2, "Mykola");
+//				statement.executeUpdate();
+//				statement.close();
+				
+//				PreparedStatement statement = 
+//						connection.prepareStatement(INSERT_BOOK);
+//				statement.setInt(1, 1);
+//				statement.setString(2, "Bukvar");
+//				statement.executeUpdate();
+//				statement.setInt(1, 1);
+//				statement.setString(2, "Chytanka");
+//				statement.executeUpdate();
+//				statement.close();
+			
+//				PreparedStatement statement = 
+//						connection.prepareStatement(SELECT_PERSON_BOOK);
+//				ResultSet rs = statement.executeQuery();
+//				while(rs.next()){
+//					System.out.println(rs.getString("name")+" "
+//						+rs.getInt("age")+" "+rs.getString("title"));
+//				}
+//				rs.close();
+//				statement.close();
+				
+				
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}
+	}
+
+}

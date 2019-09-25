@@ -1,0 +1,130 @@
+package Dz1;
+
+
+
+import java.sql.*;
+import java.util.Scanner;
+
+
+
+public class Main2 {
+
+	static boolean isRun = true;
+	public static final String CONNECTION_URL = "jdbc:mysql://localhost:3306/mybase?useSSL=false";
+	public static final String USER = "root";
+	public static final String PASSWORD = "1307195422";
+	public static final String CREATE_TABLE_PERSON_QUERY_IF_NOT_EXISTS = 
+			"CREATE TABLE person(id INT PRIMARY KEY AUTO_INCREMENT, "
+			+ "name VARCHAR(255), age INT,  heigth INT, weight INT, gender TINYINT,hobby VARCHAR(30),single TINYINT,describe VARCHAR(200), music VARCHAR(50))";
+	
+	public static final String INSERT_PERSON = 
+			"INSERT INTO person(name, age, heigth,weight,gender,hobby,single,describe,music) VALUES (?, ?,?,?,?,?,?,?,?)";
+	
+	public static final String UPDATE_PERSON = 
+			"update person set name=a1, age=b, heigth=c,weight=d, gender=e, hobby=f,single=g,describe=h,music=i where id = 2;";
+	
+	public static final String DELETE_PERSON = "delete from person where id= b;";
+
+	public static void main(String[] args) {
+
+		while (isRun) {
+			try {
+				Connection connection = DriverManager.getConnection(CONNECTION_URL, USER, PASSWORD);
+				Scanner sc = new Scanner(System.in);
+				System.out.println("1 - Створити таблицю");
+				System.out.println("2 - Додати рядок у таблицю");
+				System.out.println("3 - Редагувати рядок");
+				System.out.println("4 - Видалити рядок");
+				System.out.println("anykey - вийти з програми");
+				int a = sc.nextInt();
+				switch (a) {
+				case 1: {
+					Statement statement = connection.createStatement();
+					statement.execute(CREATE_TABLE_PERSON_QUERY_IF_NOT_EXISTS);
+					statement.close();
+				}
+				break;
+				case 2: {PreparedStatement statement = 
+						connection.prepareStatement(INSERT_PERSON);
+					System.out.println("Enter person name");
+					String personName = sc.next();
+					statement.setString(1, personName);
+					System.out.println("Enter age");
+					int age = sc.nextInt();
+					statement.setInt(2, age);
+					System.out.println("Enter heigth");
+					int heigth = sc.nextInt();
+					statement.setInt(3, heigth);
+					System.out.println("Enter weight");
+					int weight = sc.nextInt();
+					statement.setInt(4, weight);
+					System.out.println("Enter gender");
+					int gender = sc.nextInt();
+					statement.setInt(5, gender);
+					System.out.println("Enter hobby");
+					String hobby = sc.next();
+					statement.setString(6, hobby);
+					System.out.println("Enter single");
+					int single = sc.nextInt();
+					statement.setInt(7, single);
+					System.out.println("Enter describe");
+					String describe = sc.next();
+					statement.setString(8, describe);
+					System.out.println("Enter music_style");
+					String music = sc.next();
+					statement.setString(9, music);
+					statement.executeUpdate();
+					statement.close();
+				}
+				break;
+				case 3:{PreparedStatement statement = 
+						connection.prepareStatement(UPDATE_PERSON);
+					System.out.println("Enter person name");
+					String a1 = sc.next();
+					statement.setString(1, a1);
+					System.out.println("Enter age");
+					int b = sc.nextInt();
+					statement.setInt(2, b);
+					System.out.println("Enter heigth");
+					int c = sc.nextInt();
+					statement.setInt(3, c);
+					System.out.println("Enter weight");
+					int d = sc.nextInt();
+					statement.setInt(4, d);
+					System.out.println("Enter gender");
+					int e = sc.nextInt();
+					statement.setInt(5, e);
+					System.out.println("Enter hobby");
+					String f = sc.next();
+					statement.setString(6, f);
+					System.out.println("Enter single");
+					int g = sc.nextInt();
+					statement.setInt(7, g);
+					System.out.println("Enter describe");
+					String h = sc.next();
+					statement.setString(8, h);
+					System.out.println("Enter music_style");
+					String i = sc.next();
+					statement.setString(9, i);
+					statement.executeUpdate();
+					statement.close();
+				}
+				break;
+				case 4:{
+					Statement statement = connection.createStatement();
+					int b = sc.nextInt();
+					statement.execute(DELETE_PERSON);
+					statement.close();
+				}
+				break;
+			
+			}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
+
+	}
+
+}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;twist.main.java&apos; to &apos;Main.java&apos;&#x0D;&#x0A;- Original project: &apos;devJava4&apos;&#x0D;&#x0A;- Original element: &apos;twist.main.java&apos;&#x0D;&#x0A;- Renamed element: &apos;twist.Main.java&apos;" description="Rename compilation unit &apos;main.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;twist{main.java" name="Main.java" references="false" stamp="1550258322216" version="1.0"/>
+</session>

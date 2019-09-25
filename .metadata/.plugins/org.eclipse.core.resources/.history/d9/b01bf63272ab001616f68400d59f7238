@@ -1,0 +1,23 @@
+package dz4;
+
+public class Main {
+
+	public static void main(String[] args) {
+		met1();
+
+	}
+ static void met1(){
+	 int[] array= new int[10];
+	 int a=2;
+	 for (int i = 0; i < array.length; i++) {
+		array[i]=a;
+		a+=2;
+	}
+	 for (int i = 0; i < array.length; i++) {
+		System.out.print(array[i]+" ");
+	}
+	 for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+ }
+}

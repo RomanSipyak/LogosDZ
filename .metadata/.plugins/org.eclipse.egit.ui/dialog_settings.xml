@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="bitbucket.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/RomanSipyak/DzAdvance.git"/>
+		<item value="https://github.com/RomanSipyak/Rep49.git"/>
+		<item value="https://github.com/RomanSipyak/Rep48.git"/>
+		<item value="https://github.com/RomanSipyak/Rep47.git"/>
+		<item value="https://github.com/RomanSipyak/Rep46.git"/>
+		<item value="https://github.com/RomanSipyak/Rep45.git"/>
+		<item value="https://github.com/RomanSipyak/Rep44.git"/>
+		<item value="https://github.com/RomanSipyak/Rep43.git"/>
+		<item value="https://github.com/RomanSipyak/Rep42.git"/>
+		<item value="https://github.com/RomanSipyak/Rep41.git"/>
+	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="Admi &lt;Admi@Admin&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="Admi &lt;Admi@Admin&gt;"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item value="666" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="458" key="DIALOG_HEIGHT"/>
+		<item value="358" key="DIALOG_X_ORIGIN"/>
+		<item value="72" key="DIALOG_Y_ORIGIN"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.repository.CreateBranchPage$SourceSelectionDialog.dialogBounds">
+		<item value="538" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="484" key="DIALOG_HEIGHT"/>
+		<item value="-7" key="DIALOG_X_ORIGIN"/>
+		<item value="-115" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.merge.MergeResultDialog.dialogBounds">
+		<item value="373" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="199" key="DIALOG_HEIGHT"/>
+		<item value="505" key="DIALOG_X_ORIGIN"/>
+		<item value="245" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.CheckoutDialog.dialogBounds">
+		<item value="538" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="484" key="DIALOG_HEIGHT"/>
+		<item value="422" key="DIALOG_X_ORIGIN"/>
+		<item value="55" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\Admi\git\Rep20\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Admi\git\Rep1\.git">
+			<item value="false"/>
+			<item value="Admi &lt;Admi@Admin&gt;"/>
+			<item value="merge"/>
+			<item value="Admi &lt;Admi@Admin&gt;"/>
+			<item value="dbe9105025539ae5b9d8f00003271c8c36c9eeb5"/>
+		</list>
+		<list key="C:\Users\Admi\git\Test\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Admi\git\Rep22\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Admi\git\Rep34\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\Admi\git\Rep31\.git">
+			<item value="empty"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.MergeTargetSelectionDialog.dialogBounds">
+		<item value="538" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="679" key="DIALOG_HEIGHT"/>
+		<item value="422" key="DIALOG_X_ORIGIN"/>
+		<item value="8" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="GitCreatePatchWizard">
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="359,640" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+</section>

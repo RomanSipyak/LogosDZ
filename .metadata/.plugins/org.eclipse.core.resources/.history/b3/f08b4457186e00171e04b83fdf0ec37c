@@ -1,0 +1,12 @@
+package Dz1;
+import java.sql.*;
+public class Case1 implements Case {
+	Connection connection;
+
+	@Override
+	public boolean doWork() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

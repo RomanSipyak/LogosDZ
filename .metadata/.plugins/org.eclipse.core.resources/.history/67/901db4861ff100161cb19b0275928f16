@@ -1,0 +1,58 @@
+package ShablonBuilder;
+
+public class BuilderApp {
+
+	public static void main(String[] args) {
+		Car car = new CarBuilder()
+				.buildMake("Mersedes")
+				.buildTransmission(Transmission.Manual)
+				.buildmaxSpeed(140)
+				.build();
+		System.out.println(car);
+
+	}
+
+}
+enum Transmission{
+	Manual,Auto
+}
+class Car{
+	String make;
+	Transmission transmission;
+	int maxSpeed;
+	
+	public void setMake(String make) {this.make = make;}
+	public void setTransmission(Transmission transmission) {this.transmission = transmission;}
+	public void setMaxSpeed(int maxSpeed) {this.maxSpeed = maxSpeed;}
+	@Override
+	public String toString() {
+		return "Car [make=" + make + ", transmission=" + transmission
+				+ ", maxSpeed=" + maxSpeed + "]";
+	}	
+	
+}
+class CarBuilder{
+	String m;
+	Transmission t;
+	int s;
+	
+	CarBuilder buildMake(String m){
+		this.m=m;
+		return this;
+	}
+	CarBuilder buildTransmission(Transmission t){
+		this.t=t;
+		return this;
+	}
+	CarBuilder buildmaxSpeed(int s){
+		this.s=s;
+		return this;
+	}
+	Car build(){
+		Car car = new Car();
+		car.setMake(m);
+		car.setMaxSpeed(s);
+		car.setTransmission(t);
+		return car;
+	}
+}

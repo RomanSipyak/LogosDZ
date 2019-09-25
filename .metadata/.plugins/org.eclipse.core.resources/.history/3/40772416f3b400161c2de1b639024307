@@ -1,0 +1,20 @@
+package core.less.dz3;
+
+public class MyMath {
+private static final double p=3.14;
+private static final double g=9.8;
+
+public static double ploshch(double a){
+	return a=a*p;
+}
+public static double sqr(double a){
+	return a*a;
+}
+public static double P(double a){
+	return a*g;
+}
+public static double stepin(double a,int b){
+	if(b==0) return 1;
+	return stepin(a,b-1)*a;
+}
+}
