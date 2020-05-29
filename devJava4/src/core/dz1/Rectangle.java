@@ -11,7 +11,7 @@ public class Rectangle {
 		this.height = height;
 		this.width = width;
 	}
-	
+
 	public int getHeight() {
 		return height;
 	}
@@ -35,11 +35,12 @@ public class Rectangle {
 	public int plos() {
 		return (this.height * this.width);
 	}
-	
+
 	public void printPerimetr() {
-        System.out.println("Периметр прямокутника = " + per());
-    }
-    public void printArea() {
-        System.out.println("Площа прямокутника = " + plos());
-    }
+		System.out.println("Периметр прямокутника = " + per());
+	}
+
+	public void printArea() {
+		System.out.println("Площа прямокутника = " + plos());
+	}
 }

@@ -248,7 +248,7 @@ public class Main {
 				b+=1;
 			}
 		} while (a != 0);
-		System.out.println("позитивних чисел" +m+" "+"кількістьнегативних"+b);
+		System.out.println("позитивних чисел" +m+" "+"кількість негативних"+b);
 	}
 
 	static int met16() {

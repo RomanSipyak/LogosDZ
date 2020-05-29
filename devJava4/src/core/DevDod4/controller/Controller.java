@@ -1,4 +1,5 @@
 package core.DevDod4.controller;
+
 import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
@@ -25,69 +26,71 @@ public class Controller {
 		cars.add(new Car("Red", true, 13, 15));
 	}
 
-	public List<Car> findByDiametr(int diametr){
-//		List<Car> list = new ArrayList<>();
-//		for (Car car : cars) {
-//			if(car.getWheel().getDiametr()==diametr){
-//				list.add(car);
-//			}
-//		}
-//		return list;
+	public List<Car> findByDiametr(int diametr) {
+		// List<Car> list = new ArrayList<>();
+		// for (Car car : cars) {
+		// if(car.getWheel().getDiametr()==diametr){
+		// list.add(car);
+		// }
+		// }
+		// return list;
 		return cars.stream()
-		.filter(car -> car.getWheel().getDiametr()==diametr)
-		.collect(toList());
+				.filter(car -> car.getWheel().getDiametr() == diametr)
+				.collect(toList());
 	}
-	
-	public List<Car> findByDiametrAndColor(int diametr, String color){
-//		List<Car> list = new ArrayList<>();
-//		for (Car car : cars) {
-//			if(car.getWheel().getDiametr()==diametr&&car.getBody().getColor().equals(color)){
-//				list.add(car);
-//			}
-//		}
-//		return list;
+
+	public List<Car> findByDiametrAndColor(int diametr, String color) {
+		// List<Car> list = new ArrayList<>();
+		// for (Car car : cars) {
+		// if(car.getWheel().getDiametr()==diametr&&car.getBody().getColor().equals(color)){
+		// list.add(car);
+		// }
+		// }
+		// return list;
 		return cars.stream()
-		.filter(car -> car.getWheel().getDiametr()==diametr)
-		.filter(car -> car.getBody().getColor().equals(color))
-		.collect(toList());
+				.filter(car -> car.getWheel().getDiametr() == diametr)
+				.filter(car -> car.getBody().getColor().equals(color))
+				.collect(toList());
 	}
-	
-	public List<Car> changeHelm(){
+
+	public List<Car> changeHelm() {
+		cars.stream().filter(car -> car.getBody().getColor().equals("Red"))
+				.forEach(car -> car.setHelm(defHelm));
+		// for (Car car : cars) {
+		// if(car.getBody().getColor().equals("Red")){
+		// car.setHelm(defHelm);
+		// }
+		// }
+		return cars;
+	}
+
+	public List<Car> increase() {
 		cars.stream()
-		.filter(car -> car.getBody().getColor().equals("Red"))
-		.forEach(car -> car.setHelm(defHelm));
-//		for (Car car : cars) {
-//			if(car.getBody().getColor().equals("Red")){
-//				car.setHelm(defHelm);
-//			}
-//		}
+				.filter(car -> car.getHelm().isHaveButtons())
+				.forEach(
+						car -> car.getWheel().setDiametr(
+								car.getWheel().getDiametr() * 2));
+		// for (Car car : cars) {
+		// if(car.getHelm().isHaveButtons()){
+		// car.getWheel().setDiametr(car.getWheel().getDiametr()*2);
+		// }
+		// }
 		return cars;
 	}
-	
-	public List<Car> increase(){
-		cars.stream().filter(car->car.getHelm().isHaveButtons())
-		.forEach(car->car.getWheel().setDiametr(car.getWheel().getDiametr()*2));
-//		for (Car car : cars) {
-//			if(car.getHelm().isHaveButtons()){
-//				car.getWheel().setDiametr(car.getWheel().getDiametr()*2);
-//			}
-//		}
-		return cars;
-	}
-	
-	public List<Car> changeCar(int diametr){
-		cars.replaceAll(car->{
-			if(car.getWheel().getDiametr()<diametr){
+
+	public List<Car> changeCar(int diametr) {
+		cars.replaceAll(car -> {
+			if (car.getWheel().getDiametr() < diametr) {
 				return defCar;
 			}
 			return car;
 		});
-//		for (Car car : cars) {
-//			if(car.getWheel().getDiametr()<diametr){
-//				cars.set(cars.indexOf(car), defCar);
-//			}
-//		}
+		// for (Car car : cars) {
+		// if(car.getWheel().getDiametr()<diametr){
+		// cars.set(cars.indexOf(car), defCar);
+		// }
+		// }
 		return cars;
 	}
-	
+
 }

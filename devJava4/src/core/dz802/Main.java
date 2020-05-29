@@ -1,10 +1,11 @@
 package core.dz802;
 
 import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		Controller2 m = new Controller2();
+		Controller2 controller = new Controller2();
 		while (true) {
 			System.out.println("1 AddYourCommodity");
 			System.out.println("2 DeleteByPoints");
@@ -16,26 +17,25 @@ public class Main {
 			String a = k.next();
 			switch (a) {
 			case "1":
-				m.AddYourCommodity().forEach(System.out::println);
+				controller.AddYourCommodity().forEach(System.out::println);
 				break;
 			case "2":
-				m.DeleteByPoints().forEach(System.out::println);
+				controller.DeleteByPoints().forEach(System.out::println);
 				break;
 			case "3":
-				m.ReplaseCommody(c).forEach(System.out::println);
+				controller.ReplaseCommody(c).forEach(System.out::println);
 				break;
 			case "4":
-				m.Sorted().forEach(System.out::println);
+				controller.Sorted().forEach(System.out::println);
 				break;
 			case "5":
 				Controller2.getCommodities().forEach(System.out::println);
 				break;
 			default:
 				k.close();
-				
+
 			}
 		}
-
 	}
 
 }

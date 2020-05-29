@@ -45,9 +45,9 @@ public class Main {
 	2. Видалити машини, діаметр колес яких попадає у вказаний діапазон.
 
 	3. Знайти машини, які мають вказаний тип шин та діаметр коліс яких попадає у вказаний*/
-	public static void DdiametrAndBodyTypeDelete(Scanner a, Set<Car> set) {
-		int radius1 = a.nextInt();
-		int radius2 = a.nextInt();
+	public static void DdiametrAndBodyTypeDelete(Scanner scanner, Set<Car> set) {
+		int radius1 = scanner.nextInt();
+		int radius2 = scanner.nextInt();
 		int max;
 		int min;
 		if (radius1 > radius2) {
@@ -69,9 +69,9 @@ public class Main {
 
 	}
 	
-	public static void DiametrOfWeels(Scanner a, Set<Car> set) {
-		int radius1 = a.nextInt();
-		int radius2 = a.nextInt();
+	public static void DiametrOfWeels(Scanner scanner, Set<Car> set) {
+		int radius1 = scanner.nextInt();
+		int radius2 = scanner.nextInt();
 		int max;
 		int min;
 		if (radius1 > radius2) {
@@ -81,8 +81,8 @@ public class Main {
 			max = radius2;
 			min = radius1;
 		}
-		String color = a.next();
-		String typeWeels = a.next();
+		String color = scanner.next();
+		String typeWeels = scanner.next();
 		TypeWeels typeWeels1 = TypeWeels.valueOf(typeWeels.toUpperCase());
 		Iterator<Car> iter = set.iterator();
 		while (iter.hasNext()) {
@@ -94,9 +94,9 @@ public class Main {
 		}
 		System.out.println(set);
 	}
-	public static void TypeOfWeels(Scanner a, Set<Car> set) {
-		int radius1 = a.nextInt();
-		int radius2 = a.nextInt();
+	public static void TypeOfWeels(Scanner scanner, Set<Car> set) {
+		int radius1 = scanner.nextInt();
+		int radius2 = scanner.nextInt();
 		int max;
 		int min;
 		if (radius1 > radius2) {
@@ -106,7 +106,7 @@ public class Main {
 			max = radius2;
 			min = radius1;
 		}
-		String typeWeels = a.next();
+		String typeWeels = scanner.next();
 		TypeWeels typeWeels1 = TypeWeels.valueOf(typeWeels.toUpperCase());
 		Iterator<Car> iter = set.iterator();
 		while (iter.hasNext()) {

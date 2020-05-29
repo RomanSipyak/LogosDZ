@@ -12,7 +12,7 @@ public class Main {
 		while (true) {
 			System.out.println("Enter 1 to show group by Fakultet");
 			System.out.println("Enter 2 to show group by count of people");
-			System.out.println("Enter 2 to set count of people for group");
+			System.out.println("Enter 3 to set count of people for group");
 			System.out.println("Enter 4 to the max count of people on fakultet");
 			System.out.println("Enter 5 to the min count of people on fakultet");
 			switch (sc.next()) {

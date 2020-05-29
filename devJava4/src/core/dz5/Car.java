@@ -28,7 +28,6 @@ public class Car {
 	public Wheel getWheel() {
 		return wheel;
 	}
-	
 
 	public TypeWeels getTypeWeels() {
 		return wheel.getTypeWeels();
@@ -83,7 +82,6 @@ public class Car {
 	public double countOFkm() {
 		return wheel.countOFkm();
 	}
-	
 
 	@Override
 	public int hashCode() {

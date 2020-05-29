@@ -32,14 +32,11 @@ public class Controller2 {
 			Commodities.add(new Commodity("Late", 3, 7, 11, 15));
 			Commodities.add(new Commodity("Botlle", 4, 8, 12, 16));
 	
-
 		}
 		
-
 		public static List<Commodity> getCommodities() {
 			return Commodities;
 		}
-
 
 		public List<Commodity> AddYourCommodity() {
 			String name = sc.next();
@@ -193,21 +190,15 @@ public class Controller2 {
 							.thenComparing(comparingInt(Commodity::getHeight).reversed())
 							.thenComparing(comparingInt(Commodity::getWidth).reversed()));
 				case "2":
-
 					return Commodities.stream().sorted(comparing(Commodity::getName).reversed());
 				case "3":
-
 					return Commodities.stream().sorted(comparingDouble(Commodity::getPrise).reversed());
 				case "4":
-
 					return Commodities.stream().sorted(comparingDouble(Commodity::getWeight).reversed());
 				case "5":
-
 					return Commodities.stream().sorted(comparing(Commodity::getHeight).reversed());
-				case "6":
-					
+				case "6":			
 					return Commodities.stream().sorted(comparing(Commodity::getWidth).reversed());
-
 				default:
 					return Commodities.stream();
 				}
@@ -216,5 +207,3 @@ public class Controller2 {
 			}
 		}
 	}
-
-

@@ -75,5 +75,5 @@ public class Body {
 		return "Body [weight=" + weight + ", height=" + height + ", color="
 				+ color + "]";
 	}
-	
+
 }
