@@ -77,7 +77,7 @@ public class Person implements Comparable<Person>,Serializable{
 	}
 
 	@Override
-	public int compareTo(Person жаренаКартопля) {
-		return name.compareTo(жаренаКартопля.name);
+	public int compareTo(Person person) {
+		return name.compareTo(person.name);
 	}
 }

@@ -17,9 +17,9 @@ public class Main {
 		list.forEach(System.out::println);
 		for (String string : list) {
 			System.out.println(string);
-			System.out.println(string.substring(0,1));
+			System.out.println(string.substring(0, 1));
 		}
-		for (int i = 0; i < list.size(); i++){
+		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i));
 		}
 		System.out.println(list.indexOf("Ivan"));
@@ -28,6 +28,6 @@ public class Main {
 		System.out.println(list.set(0, "Ivan"));
 		System.out.println(list);
 		List<String> list2 = new LinkedList<>();
-		
+
 	}
 }

@@ -3,16 +3,16 @@ package core.less5;
 public class Cpu {
 
 	private double frequency;
-	
+
 	private int count;
 
 	public Cpu(double frequency, int count) {
 		this.frequency = frequency;
 		this.count = count;
 	}
-	
-	public void turboBoost(){
-		frequency+=0.5;
+
+	public void turboBoost() {
+		frequency += 0.5;
 	}
 
 	public double getFrequency() {

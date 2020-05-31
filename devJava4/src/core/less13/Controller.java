@@ -20,16 +20,16 @@ import core.less6.Person;
 public class Controller {
 
 	private List<Person> persons = restore();
-	
-	public void restore(String fileName){
-		File file = new File(fileName+".txt");
-		if(file.exists()){
-			try(BufferedReader br = new BufferedReader(
-				new InputStreamReader(new FileInputStream(file)))){
+
+	public void restore(String fileName) {
+		File file = new File(fileName + ".txt");
+		if (file.exists()) {
+			try (BufferedReader br = new BufferedReader(new InputStreamReader(
+					new FileInputStream(file)))) {
 				List<Person> list = new ArrayList<>();
 				while (br.ready()) {
 					String line = br.readLine();
-					if(!line.isEmpty()){
+					if (!line.isEmpty()) {
 						String[] array = line.split("\\ ");
 						Person p = new Person(array[0],
 								Integer.valueOf(array[1]),
@@ -39,75 +39,75 @@ public class Controller {
 				}
 				persons = list;
 				save();
-			}catch (IOException e) {
+			} catch (IOException e) {
 			}
 		}
 	}
-	
-	public void write(String fileName){
-		File file = new File(fileName+".txt");
-		try(PrintWriter pw = new PrintWriter(new BufferedWriter(
-				new FileWriter(file)))){
+
+	public void write(String fileName) {
+		File file = new File(fileName + ".txt");
+		try (PrintWriter pw = new PrintWriter(new BufferedWriter(
+				new FileWriter(file)))) {
 			for (Person person : persons) {
-				pw.println(person.getName()+" "+person.getAge()+" "
-						+person.getGender());
+				pw.println(person.getName() + " " + person.getAge() + " "
+						+ person.getGender());
 			}
 			pw.flush();
-		}catch (IOException e) {
+		} catch (IOException e) {
 		}
 	}
-	
-	private void save(){
+
+	private void save() {
 		File file = new File("save.bf");
-		try(ObjectOutputStream oos = new ObjectOutputStream(
-				new FileOutputStream(file))){
+		try (ObjectOutputStream oos = new ObjectOutputStream(
+				new FileOutputStream(file))) {
 			oos.writeObject(persons);
 			oos.flush();
-		}catch (IOException e) {
+		} catch (IOException e) {
 		}
 	}
-	
+
 	@SuppressWarnings("unchecked")
-	private List<Person> restore(){
+	private List<Person> restore() {
 		File file = new File("save.bf");
-		if(file.exists()){
-			try(ObjectInputStream ois = new ObjectInputStream(
-				new FileInputStream(file))){
+		if (file.exists()) {
+			try (ObjectInputStream ois = new ObjectInputStream(
+					new FileInputStream(file))) {
 				return (List<Person>) ois.readObject();
-			}catch (IOException | ClassNotFoundException e) {
+			} catch (IOException | ClassNotFoundException e) {
 			}
-//			InputStream is = null;
-//			ObjectInputStream ois = null;
-//			try{
-//				is = new FileInputStream(file);
-//				ois = new ObjectInputStream(is);
-//				return (List<Person>) ois.readObject();
-//			}catch(IOException | ClassNotFoundException  e){
-//				
-//			}finally{
-//				if(ois!=null){
-//					try {
-//						ois.close();
-//					} catch (IOException e) {
-//					}
-//				}
-//				if(is!=null){
-//					try {
-//						is.close();
-//					} catch (IOException e) {
-//					}
-//				}
-//			}
+			// InputStream is = null;
+			// ObjectInputStream ois = null;
+			// try{
+			// is = new FileInputStream(file);
+			// ois = new ObjectInputStream(is);
+			// return (List<Person>) ois.readObject();
+			// }catch(IOException | ClassNotFoundException e){
+			//
+			// }finally{
+			// if(ois!=null){
+			// try {
+			// ois.close();
+			// } catch (IOException e) {
+			// }
+			// }
+			// if(is!=null){
+			// try {
+			// is.close();
+			// } catch (IOException e) {
+			// }
+			// }
+			// }
 		}
 		return new ArrayList<>();
 	}
-	
-	public void add(Person p){
+
+	public void add(Person p) {
 		persons.add(p);
 		save();
 	}
-	
-	public void print(){
+
+	public void print() {
 		persons.forEach(System.out::println);
 	}
 }

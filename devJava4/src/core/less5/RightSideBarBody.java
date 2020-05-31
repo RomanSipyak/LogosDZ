@@ -1,6 +1,6 @@
 package core.less5;
 
-public class RightSideBarBody implements Body{
+public class RightSideBarBody implements Body {
 
 	@Override
 	public void printBody() {

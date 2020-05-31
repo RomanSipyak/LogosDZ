@@ -17,12 +17,12 @@ public class Main {
 		add(list, new Circle(5));
 		print(list);
 	}
-	
-	static void add(List<? super Geometric> list, Geometric geometric){
+
+	static void add(List<? super Geometric> list, Geometric geometric) {
 		list.add(geometric);
 	}
-	
-	static void print(List<? extends Geometric> list){
+
+	static void print(List<? extends Geometric> list) {
 		for (Geometric geometric : list) {
 			geometric.print();
 		}

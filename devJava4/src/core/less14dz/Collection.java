@@ -36,42 +36,37 @@ public class Collection {
 		public void print() {
 			while (hasNext()) {
 				Object a = next();
-				if((int)mas[iter]%2!=0){
-					a=0;
-				}
+//				if ((int) mas[iter] % 2 != 0) {
+//					a = 0;
+//				}
 				System.out.println(a);
 			}
 		}
 
 	}
+
 	public class Iterator2 implements Iterator {
 		public int iter;
 
 		public Iterator2() {
-			iter = mas.length+1;
+			iter = mas.length;
 		}
 
 		@Override
 		public Object next() {
-			
-			iter=iter-2;
+			iter = iter - 1;
 			return mas[iter];
-		
-			
 		}
 
 		@Override
 		public boolean hasNext() {
-
 			try {
-				if (mas[iter - 2] != null && iter != 0) {
+				if (mas[iter - 1] != null && iter != 0) {
 					return true;
 				}
 			} catch (ArrayIndexOutOfBoundsException e) {
-		
 			}
 			return false;
-
 		}
 
 		public void print() {

@@ -8,7 +8,8 @@ import java.util.function.IntPredicate;
 import core.less14.Person;
 
 public class Main {
-	static Person p= new Person("ivan",18);
+	static Person p = new Person("ivan", 18);
+
 	public static void main(String[] args) {
 		// print(new Filter() {//анонімна реалізація інтерфейса
 		// @Override
@@ -29,19 +30,20 @@ public class Main {
 		pritSomeFromPerson(Person::getName);
 		pritSomeFromPerson(Person::getAge);
 		List<Person> list = new ArrayList<>();
-//		list.stream()
-//		.map(Person::getPets)
-//		.filter(l->l!=0)
-//		.filter(l->l.size()>=3)
-//		.flatMap(List::stream)
-//		.map(Person.Pet::getName)
-//		.unordered()
-//		.distinct()
-//		.filter(s->s.length()>=10)
-//		.flatMapToInt(String::chars)
-//		.reduce(0,(acc,elem)->acc+elem);
+		// list.stream()
+		// .map(Person::getPets)
+		// .filter(l->l!=0)
+		// .filter(l->l.size()>=3)
+		// .flatMap(List::stream)
+		// .map(Person.Pet::getName)
+		// .unordered()
+		// .distinct()
+		// .filter(s->s.length()>=10)
+		// .flatMapToInt(String::chars)
+		// .reduce(0,(acc,elem)->acc+elem);
 	}
-	static <R> void pritSomeFromPerson(Function<Person,R>function){
+
+	static <R> void pritSomeFromPerson(Function<Person, R> function) {
 		System.out.println(function.apply(p));
 	}
 

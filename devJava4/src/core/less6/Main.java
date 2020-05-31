@@ -1,4 +1,3 @@
-
 package core.less6;
 
 import java.util.Scanner;
@@ -40,7 +39,7 @@ public class Main {
 							System.out.println(months[i]);
 						}
 					}
-				}else{
+				} else {
 					System.err.println("Enter correct!!!");
 				}
 				break;

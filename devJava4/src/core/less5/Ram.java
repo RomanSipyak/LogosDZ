@@ -3,7 +3,7 @@ package core.less5;
 public class Ram {
 
 	private int frequency;
-	
+
 	private int volume;
 
 	public Ram(int frequency, int volume) {

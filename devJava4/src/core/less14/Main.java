@@ -16,18 +16,14 @@ public class Main {
 		Pet pet1 = person1.new Pet("Barsik");
 		System.out.println(pet.equals(pet1));
 		System.out.println(pet.getOuterType());
-		Person person2 = new Person.Builder()
-			.age(19)
-			.name("Mykola")
-			.addPet("Barsik")
-			.addPet("Tuzik")
-			.addPet("Komposter").build();
+		Person person2 = new Person.Builder().age(19).name("Mykola")
+				.addPet("Barsik").addPet("Tuzik").addPet("Komposter").build();
 		System.out.println(person2);
 		person2.getPets().sort(comparator());
-		
+
 	}
-	
-	public static Comparator<Pet> comparator(){
+
+	public static Comparator<Pet> comparator() {
 		return new Comparator<Pet>() {
 			@Override
 			public int compare(Pet o1, Pet o2) {
@@ -35,27 +31,29 @@ public class Main {
 			}
 		};
 	}
-	
-	public static List<Map.Entry<Integer, String>> 
-										getEntries(List<Person> list){
-		class Entry implements Map.Entry<Integer, String>{
-			
+
+	public static List<Map.Entry<Integer, String>> getEntries(List<Person> list) {
+		class Entry implements Map.Entry<Integer, String> {
+
 			private Integer key;
-			
+
 			private String value;
 
 			Entry(Integer key, String value) {
 				this.key = key;
 				this.value = value;
 			}
+
 			@Override
 			public Integer getKey() {
 				return key;
 			}
+
 			@Override
 			public String getValue() {
 				return value;
 			}
+
 			@Override
 			public String setValue(String value) {
 				this.value = value;
@@ -65,7 +63,6 @@ public class Main {
 		List<Map.Entry<Integer, String>> entries = new ArrayList<>();
 		for (Person person : list) {
 			entries.add(new Entry(person.getAge(), person.getName()));
-			
 		}
 		return entries;
 	}

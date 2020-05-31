@@ -1,7 +1,7 @@
 package core.less3;
 
 public class Main {
-	
+
 	public static final int ERGHV_JHJH = 9;
 
 	public final static void main(String[] args) {
